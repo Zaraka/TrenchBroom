@@ -12,7 +12,7 @@ pandoc --version
 mkdir buildAppImage
 cd buildAppImage
 cmake .. -DCMAKE_PREFIX_PATH="cmake/packages" -DAPPIMAGE_BUILD=ON -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" -DCMAKE_EXE_LINKER_FLAGS="-Wl,--fatal-warnings" -DTB_SUPPRESS_PCH=1 || exit 1
-make -j
+make
 make install DESTDIR=AppDir
 
 # TODO: need to be resolved VERSION=??
